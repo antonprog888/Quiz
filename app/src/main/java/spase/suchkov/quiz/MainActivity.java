@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (backPressedTime+2000 > System.currentTimeMillis()){
-            backToast.cancel();
+            backToast.cancel(); //Команда для закрытия сообщения
             super.onBackPressed();
             return;
         }else{
             backToast = Toast.makeText(getBaseContext(),"Нажмите еще раз чтобы выйти",Toast.LENGTH_SHORT) ;
-            backToast.show();
+            backToast.show(); //Команда для появления сообщения
 
         }
 
