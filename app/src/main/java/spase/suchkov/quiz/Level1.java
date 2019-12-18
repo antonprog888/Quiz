@@ -2,7 +2,10 @@ package spase.suchkov.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -11,7 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Level1 extends AppCompatActivity {
-
+    Dialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +26,22 @@ public class Level1 extends AppCompatActivity {
         //Код который скругляет углы правой картинки
         img_right.setClipToOutline(true);
 
+        //Развернуть игру на весь экран начало
+        Window w = getWindow();
+        //  w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //Развернуть игру на весь экран конец
+        //Вызов диалогового окна в конце меню
+        dialog = new Dialog(this);//создаем диалоговое окно
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем заголовок диалогового окна
+        dialog.setContentView(R.layout.previewdialog); //Путь к макету диалогового окна
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
+        dialog.setCancelable(false); //Окно нельзя закрыть кнопкой назад
+        dialog.show(); //показать диалоговое окно
+
+
+
         Button button_back = findViewById(R.id.button_back);
-
-
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,13 +57,6 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-
-
-        //Развернуть игру на весь экран начало
-        Window w = getWindow();
-        //  w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //Развернуть игру на весь экран конец
     }
 
     //Системная кнопка Назад начало
@@ -61,5 +70,4 @@ public class Level1 extends AppCompatActivity {
         }
     }
     //Системная кнопка Назад конец
-
 }
