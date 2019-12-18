@@ -47,8 +47,8 @@
                     android:text="@string/back"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-
                     android:textSize="25sp" />
+
 
                 <TextView
                     android:id="@+id/text_levels"

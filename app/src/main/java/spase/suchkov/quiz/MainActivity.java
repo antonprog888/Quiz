@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             backToast = Toast.makeText(getBaseContext(),"Нажмите еще раз чтобы выйти",Toast.LENGTH_SHORT) ;
             backToast.show(); //Команда для появления сообщения
-
         }
-
         backPressedTime = System.currentTimeMillis();
     }
 
