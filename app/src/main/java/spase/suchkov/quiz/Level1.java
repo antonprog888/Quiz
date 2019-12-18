@@ -12,9 +12,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Level1 extends AppCompatActivity {
     Dialog dialog;
+    private Object Button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,46 @@ public class Level1 extends AppCompatActivity {
         dialog.setContentView(R.layout.previewdialog); //Путь к макету диалогового окна
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialog.setCancelable(false); //Окно нельзя закрыть кнопкой назад
+
+        //Кнопка закрытия диалогового окна
+        TextView btclose = (TextView)dialog.findViewById(R.id.btnclose);
+        btclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Обрабатывание кнопки Закрытия начало
+                try{
+                    //Вернтьсся назад к выбору уровня начало
+                    Intent intent = new Intent(Level1.this, GameLevels.class);
+                    startActivity(intent); //Старт намериния
+                    finish(); //Закрыть класс
+
+                    //Вернтьсся назад к выбору уровня конец
+                } catch (Exception e){
+                }
+                dialog.dismiss(); //Закрываем диалоговое окно
+                //Обрабатывание кнопки Закрытия конец
+
+            }
+        });
+
+        //Кнопка Продолжить начало
+
+        Button btncontinue = dialog.findViewById(R.id.btncontinue);
+        btncontinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    dialog.dismiss();
+                }catch(Exception e){
+
+                }
+            }
+        });
+
+
+        //Кнопка Продолжить конец
+
+
         dialog.show(); //показать диалоговое окно
 
 
