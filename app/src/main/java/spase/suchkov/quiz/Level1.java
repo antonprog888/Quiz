@@ -22,6 +22,10 @@ public class Level1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
+        //Создаем переменую text levels
+        TextView text_levels = findViewById(R.id.text_levels);
+        text_levels.setText(R.string.level1); //установили текст
+
         final ImageView img_left = findViewById(R.id.img_left);
         //Код который скругляет углы левой картинки
         img_left.setClipToOutline(true);
@@ -76,12 +80,8 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-
         //Кнопка Продолжить конец
-
-
         dialog.show(); //показать диалоговое окно
-
 
 
         Button button_back = findViewById(R.id.button_back);
@@ -91,9 +91,9 @@ public class Level1 extends AppCompatActivity {
                 //Команда для кнопки назад
                 //Начало конструкции
                 try{
-                    Intent intent = new Intent(Level1.this, GameLevels.class);
-                    startActivity(intent);
-                    finish();
+                    Intent intent = new Intent(Level1.this, GameLevels.class);//Создали намерение для перехода
+                    startActivity(intent); //Старт намерения
+                    finish(); //Закрыть этот класс
                 } catch (Exception e){
                 }
                 //Конец конструкции
