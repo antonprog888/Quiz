@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ public class Level1 extends AppCompatActivity {
     public int numRight; //переменая для правой картинки + текст
     Array array = new Array(); //Создали новый объект из класса Array
     Random random = new Random(); //Для генерации случайных чисел
+    public int count = 0; //Счетчик правильных ответов
 
     private Object Button;
 
@@ -115,6 +118,10 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
+        //Подключаем анимацию начало
+        final Animation a = AnimationUtils.loadAnimation(Level1.this,R.anim.alpha);
+
+        //Подключаем анимацию конец
         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
         img_left.setImageResource(array.images1[numLeft]);  //Достаем из масива картинку
         textLeft.setText(array.texts1[numLeft]); //Достаем из масива текст
