@@ -14,8 +14,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Level1 extends AppCompatActivity {
     Dialog dialog;
+
+    public int numLeft; //переменая для левой картики + текст
+    public int numRight; //переменая для правой картинки + текст
+    Array array = new Array(); //Создали новый объект из класса Array
+    Random random = new Random(); //Для генерации случайных чисел
+
     private Object Button;
 
     @Override
@@ -29,6 +37,13 @@ public class Level1 extends AppCompatActivity {
         final ImageView img_left = findViewById(R.id.img_left);
         //Код который скругляет углы левой картинки
         img_left.setClipToOutline(true);
+
+        //Путь к левой TextView
+        final TextView textLeft = findViewById(R.id.text_left);
+        //Путь к правой TextView
+        final TextView textRight = findViewById(R.id.text_right);
+
+
         final ImageView img_right = findViewById(R.id.img_right);
         //Код который скругляет углы правой картинки
         img_right.setClipToOutline(true);
@@ -100,6 +115,19 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
+        numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
+        img_left.setImageResource(array.images1[numLeft]);  //Достаем из масива картинку
+        textLeft.setText(array.texts1[numLeft]); //Достаем из масива текст
+
+        numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
+        //Цикл с предусловием проверяющий равенство чисел начало
+        while (numLeft==numRight){
+            numRight = random.nextInt(10);
+        }
+        //Цикл с предусловием проверяющий равенство чисел конец
+
+        img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
+        textRight.setText(array.texts1[numRight]); //Достаем из масива текст
     }
 
     //Системная кнопка Назад начало
