@@ -3,10 +3,12 @@ package spase.suchkov.quiz;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.app.slice.SliceItem;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -41,15 +43,17 @@ public class Level1 extends AppCompatActivity {
         //Код который скругляет углы левой картинки
         img_left.setClipToOutline(true);
 
+
+        final ImageView img_right = findViewById(R.id.img_right);
+        //Код который скругляет углы правой картинки
+        img_right.setClipToOutline(true);
+
         //Путь к левой TextView
         final TextView textLeft = findViewById(R.id.text_left);
         //Путь к правой TextView
         final TextView textRight = findViewById(R.id.text_right);
 
 
-        final ImageView img_right = findViewById(R.id.img_right);
-        //Код который скругляет углы правой картинки
-        img_right.setClipToOutline(true);
 
         //Развернуть игру на весь экран начало
         Window w = getWindow();
@@ -135,6 +139,32 @@ public class Level1 extends AppCompatActivity {
 
         img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
         textRight.setText(array.texts1[numRight]); //Достаем из масива текст
+
+        //Обрабатываем нажатие на левую картинку начало
+        img_left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                //Усовие касания картинк начало
+
+                if (event.getAction()==MotionEvent.ACTION_DOWN) {
+                    //Если коснулся картинки начало
+                  img_right.setEnabled(false);
+                  if (numLeft>numRight) {
+                      img_left.setImageResource(R.drawable.img_true);
+                  } else {
+                      img_left.setImageResource(R.drawable.img_false);
+                  }
+
+                } else if  (event.getAction()==MotionEvent.ACTION_UP){
+                    //Если отпустили палец начало
+
+                }
+                //Усовие касания картинк конец
+                return true;
+            }
+        });
+        //Обрабатываем нажатие на левую картинку конец
+
     }
 
     //Системная кнопка Назад начало
