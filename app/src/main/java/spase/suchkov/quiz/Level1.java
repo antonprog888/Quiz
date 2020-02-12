@@ -323,7 +323,7 @@ public class Level1 extends AppCompatActivity {
                         img_right.startAnimation(a);
                         textRight.setText(array.texts1[numRight]); //Достаем из масива текст
 
-                        img_left    .setEnabled(true);
+                        img_left.setEnabled(true);
 
                     }
 
