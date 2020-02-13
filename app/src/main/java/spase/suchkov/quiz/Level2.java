@@ -67,13 +67,14 @@ public class Level2 extends AppCompatActivity {
         dialog.setCancelable(false); //Окно нельзя закрыть кнопкой назад
 
         //Утанавливаем картинку в диалоговое окно - Начало
-       // ImageView previewimg = (ImageView) dialog.findViewById(R.id.previewimgtwo);
-       // previewimg.setImageResource(R.id.previewimgtwo);
-
-
-
+        ImageView previewimg =  dialog.findViewById(R.id.previewimg); //previewimg
+        previewimg.setImageResource(R.drawable.previewimgtwo);
         //Утанавливаем картинку в диалоговое окно - Конец
 
+        //Устанавливаем описание задания начало
+        TextView textdescription = dialog.findViewById(R.id.textdescription);
+        textdescription.setText(R.string.leveltwo);
+        //Устанавливаем описание задания конец
 
 
         //Кнопка закрытия диалогового окна
