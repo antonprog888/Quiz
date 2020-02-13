@@ -66,6 +66,16 @@ public class Level2 extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
         dialog.setCancelable(false); //Окно нельзя закрыть кнопкой назад
 
+        //Утанавливаем картинку в диалоговое окно - Начало
+       // ImageView previewimg = (ImageView) dialog.findViewById(R.id.previewimgtwo);
+       // previewimg.setImageResource(R.id.previewimgtwo);
+
+
+
+        //Утанавливаем картинку в диалоговое окно - Конец
+
+
+
         //Кнопка закрытия диалогового окна
         TextView btclose = (TextView)dialog.findViewById(R.id.btnclose);
         btclose.setOnClickListener(new View.OnClickListener() {
