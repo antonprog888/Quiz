@@ -148,8 +148,8 @@ public class Level2 extends AppCompatActivity {
 
         //Подключаем анимацию конец
         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-        img_left.setImageResource(array.images1[numLeft]);  //Достаем из масива картинку
-        textLeft.setText(array.texts1[numLeft]); //Достаем из масива текст
+        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
+        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
 
         numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
         //Цикл с предусловием проверяющий равенство чисел начало
@@ -158,8 +158,8 @@ public class Level2 extends AppCompatActivity {
         }
         //Цикл с предусловием проверяющий равенство чисел конец
 
-        img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
-        textRight.setText(array.texts1[numRight]); //Достаем из масива текст
+        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
+        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
 
         //Обрабатываем нажатие на левую картинку начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -224,10 +224,10 @@ public class Level2 extends AppCompatActivity {
                     } else {
 
                         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-                        img_left.setImageResource(array.images1[numLeft]);  //Достаем из масива картинку
+                        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
                         img_left.startAnimation(a);
 
-                        textLeft.setText(array.texts1[numLeft]); //Достаем из масива текст
+                        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
 
                         numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
                         //Цикл с предусловием проверяющий равенство чисел начало
@@ -236,9 +236,9 @@ public class Level2 extends AppCompatActivity {
                         }
                         //Цикл с предусловием проверяющий равенство чисел конец
 
-                        img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
+                        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
                         img_right.startAnimation(a);
-                        textRight.setText(array.texts1[numRight]); //Достаем из масива текст
+                        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
 
                         img_right.setEnabled(true);
 
@@ -317,10 +317,10 @@ public class Level2 extends AppCompatActivity {
                     } else {
 
                         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-                        img_left.setImageResource(array.images1[numLeft]);  //Достаем из масива картинку
+                        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
                         img_left.startAnimation(a);
 
-                        textLeft.setText(array.texts1[numLeft]); //Достаем из масива текст
+                        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
 
                         numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
                         //Цикл с предусловием проверяющий равенство чисел начало
@@ -329,9 +329,9 @@ public class Level2 extends AppCompatActivity {
                         }
                         //Цикл с предусловием проверяющий равенство чисел конец
 
-                        img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
+                        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
                         img_right.startAnimation(a);
-                        textRight.setText(array.texts1[numRight]); //Достаем из масива текст
+                        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
 
                         img_left.setEnabled(true);
 
