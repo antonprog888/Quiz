@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Level2 extends AppCompatActivity {
     Dialog dialog;
+    Dialog dialogEnd;
 
     public int numLeft; //переменая для левой картики + текст
     public int numRight; //переменая для правой картинки + текст
@@ -114,6 +115,64 @@ public class Level2 extends AppCompatActivity {
 
         //Кнопка Продолжить конец
         dialog.show(); //показать диалоговое окно
+
+        //______________________________________________________
+        //Вызов диалогового окна в конце игры
+        dialogEnd = new Dialog(this);//создаем диалоговое окно
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем заголовок диалогового окна
+        dialogEnd.setContentView(R.layout.dialogend); //Путь к макету диалогового окна
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); //прозрачный фон диалогового окна
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT);// Развернуть диалоговое окно на весь экран
+        dialogEnd.setCancelable(false); //Окно нельзя закрыть кнопкой назад
+
+        //Интересный факт начало
+        TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
+        textdescriptionEnd.setText(R.string.leveltwoEnd);
+        //Интересный факт конец
+
+
+
+        //Кнопка закрытия диалогового окна
+        TextView btclose2 = (TextView)dialogEnd.findViewById(R.id.btnclose);
+        btclose2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Обрабатывание кнопки Закрытия начало
+                try{
+                    //Вернтьсся назад к выбору уровня начало
+                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    startActivity(intent); //Старт намериния
+                    finish(); //Закрыть класс
+
+                    //Вернтьсся назад к выбору уровня конец
+                } catch (Exception e){
+                }
+                dialogEnd.dismiss(); //Закрываем диалоговое окно
+                //Обрабатывание кнопки Закрытия конец
+
+            }
+        });
+
+        //Кнопка Продолжить начало
+
+        Button btncontinue2 = dialogEnd.findViewById(R.id.btncontinue);
+        btncontinue2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent(Level2.this, Level2.class);
+                    startActivity(intent); //Старт намериния
+                    finish(); //Закрыть класс
+                } catch (Exception e){
+                }
+                dialogEnd.dismiss(); //Закрываем диалоговое окно
+            }
+        });
+
+        //Кнопка Продолжить конец
+
+//______________________________________________________
+
 
 
         Button button_back = findViewById(R.id.button_back);
@@ -221,6 +280,7 @@ public class Level2 extends AppCompatActivity {
 
                     if (count==20) {
                         //Выход из уровня
+                        dialogEnd.show();
                     } else {
 
                         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
@@ -314,6 +374,7 @@ public class Level2 extends AppCompatActivity {
 
                     if (count==20) {
                         //Выход из уровня
+                        dialogEnd.show();
                     } else {
 
                         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
