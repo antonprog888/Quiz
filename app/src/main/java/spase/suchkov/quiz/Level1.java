@@ -90,7 +90,7 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-        //Кнопка Продолжить начало
+        //Кнопка Продолжить начало для диалога в начале уровня
 
         Button btncontinue = dialog.findViewById(R.id.btncontinue);
         btncontinue.setOnClickListener(new View.OnClickListener() {

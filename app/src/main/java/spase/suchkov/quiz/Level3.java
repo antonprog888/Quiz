@@ -13,13 +13,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Level2 extends AppCompatActivity {
+public class Level3 extends AppCompatActivity {
     Dialog dialog;
     Dialog dialogEnd;
 
@@ -69,12 +70,17 @@ public class Level2 extends AppCompatActivity {
 
         //Утанавливаем картинку в диалоговое окно - Начало
         ImageView previewimg =  dialog.findViewById(R.id.previewimg); //previewimg
-        previewimg.setImageResource(R.drawable.previewimgtwo);
+        previewimg.setImageResource(R.drawable.previewimg3);
         //Утанавливаем картинку в диалоговое окно - Конец
+
+        //Устанавливаем фон диалогового окна - Начало
+        LinearLayout dialogfon = dialog.findViewById(R.id.dialogfon);
+        dialogfon.setBackgroundResource(R.drawable.previewbackground3);
+        //Устанавливаем фон диалогового окна - Конец
 
         //Устанавливаем описание задания начало
         TextView textdescription = dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.leveltwo);
+        textdescription.setText(R.string.levelthree);
         //Устанавливаем описание задания конец
 
 
@@ -86,7 +92,7 @@ public class Level2 extends AppCompatActivity {
                 //Обрабатывание кнопки Закрытия начало
                 try{
                     //Вернтьсся назад к выбору уровня начало
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
 
@@ -140,7 +146,7 @@ public class Level2 extends AppCompatActivity {
                 //Обрабатывание кнопки Закрытия начало
                 try{
                     //Вернтьсся назад к выбору уровня начало
-                    Intent intent = new Intent(Level2.this, GameLevels.class);
+                    Intent intent = new Intent(Level3.this, GameLevels.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
 
@@ -160,7 +166,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level2.this, Level3.class);
+                    Intent intent = new Intent(Level3.this, Level3.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
                 } catch (Exception e){
@@ -182,7 +188,7 @@ public class Level2 extends AppCompatActivity {
                 //Команда для кнопки назад
                 //Начало конструкции
                 try{
-                    Intent intent = new Intent(Level2.this, GameLevels.class);//Создали намерение для перехода
+                    Intent intent = new Intent(Level3.this, GameLevels.class);//Создали намерение для перехода
                     startActivity(intent); //Старт намерения
                     finish(); //Закрыть этот класс
                 } catch (Exception e){
@@ -203,7 +209,7 @@ public class Level2 extends AppCompatActivity {
         //Массив для прогреса игры конец
 
         //Подключаем анимацию начало
-        final Animation a = AnimationUtils.loadAnimation(Level2.this,R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level3.this,R.anim.alpha);
 
         //Подключаем анимацию конец
         numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
@@ -413,7 +419,7 @@ public class Level2 extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         try{
-            Intent intent = new Intent(Level2.this, GameLevels.class);
+            Intent intent = new Intent(Level3.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception e){
