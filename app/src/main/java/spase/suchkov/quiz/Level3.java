@@ -1,5 +1,6 @@
 package spase.suchkov.quiz;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -32,13 +33,15 @@ public class Level3 extends AppCompatActivity {
 
     private Object Button;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
         //Создаем переменую text levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1); //установили текст
+        text_levels.setText(R.string.level3); //установили текст
+        text_levels.setTextColor(R.color.black95);
 
         final ImageView img_left = findViewById(R.id.img_left);
         //Код который скругляет углы левой картинки
@@ -51,8 +54,10 @@ public class Level3 extends AppCompatActivity {
 
         //Путь к левой TextView
         final TextView textLeft = findViewById(R.id.text_left);
+        textLeft.setTextColor(R.color.black95);
         //Путь к правой TextView
         final TextView textRight = findViewById(R.id.text_right);
+        textRight.setTextColor(R.color.black95);
 
 
 
@@ -189,6 +194,8 @@ public class Level3 extends AppCompatActivity {
 
 
         Button button_back = findViewById(R.id.button_back);
+        button_back.setBackgroundResource(R.drawable.button_stroke_black95_press_white);
+        button_back.setTextColor(R.color.black95);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

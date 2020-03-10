@@ -37,7 +37,7 @@ public class Level2 extends AppCompatActivity {
         setContentView(R.layout.universal);
         //Создаем переменую text levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1); //установили текст
+        text_levels.setText(R.string.level2); //установили текст
 
         final ImageView img_left = findViewById(R.id.img_left);
         //Код который скругляет углы левой картинки
