@@ -61,6 +61,13 @@ public class Level3 extends AppCompatActivity {
         //  w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Развернуть игру на весь экран конец
+
+        //Устанавливаем Фон диалогоого окна начало
+        ImageView background = (ImageView)findViewById(R.id.background);
+        background.setImageResource(R.drawable.level3);
+        //Устанавливаем Фон диалогоого окна конец
+
+
         //Вызов диалогового окна в конце меню
         dialog = new Dialog(this);//создаем диалоговое окно
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем заголовок диалогового окна
@@ -212,19 +219,19 @@ public class Level3 extends AppCompatActivity {
         final Animation a = AnimationUtils.loadAnimation(Level3.this,R.anim.alpha);
 
         //Подключаем анимацию конец
-        numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
-        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
+        numLeft = random.nextInt(21); //Генерируем случайное число от 1 до 21
+        img_left.setImageResource(array.images3[numLeft]);  //Достаем из масива картинку
+        textLeft.setText(array.texts3[numLeft]); //Достаем из масива текст
 
-        numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
+        numRight = random.nextInt(21); //Генерируем случайное число от 0 до 21
         //Цикл с предусловием проверяющий равенство чисел начало
         while (numLeft==numRight){
-            numRight = random.nextInt(10);
+            numRight = random.nextInt(21);
         }
         //Цикл с предусловием проверяющий равенство чисел конец
 
-        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
-        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
+        img_right.setImageResource(array.images3[numRight]); //Достаем из масива картинку
+        textRight.setText(array.texts3[numRight]); //Достаем из масива текст
 
         //Обрабатываем нажатие на левую картинку начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
@@ -289,22 +296,22 @@ public class Level3 extends AppCompatActivity {
                         dialogEnd.show();
                     } else {
 
-                        numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-                        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
+                        numLeft = random.nextInt(21); //Генерируем случайное число от 0 до 21
+                        img_left.setImageResource(array.images3[numLeft]);  //Достаем из масива картинку
                         img_left.startAnimation(a);
 
-                        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
+                        textLeft.setText(array.texts3[numLeft]); //Достаем из масива текст
 
-                        numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
+                        numRight = random.nextInt(21); //Генерируем случайное число от 0 до 21
                         //Цикл с предусловием проверяющий равенство чисел начало
                         while (numLeft==numRight){
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(21);
                         }
                         //Цикл с предусловием проверяющий равенство чисел конец
 
-                        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
+                        img_right.setImageResource(array.images3[numRight]); //Достаем из масива картинку
                         img_right.startAnimation(a);
-                        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
+                        textRight.setText(array.texts3[numRight]); //Достаем из масива текст
 
                         img_right.setEnabled(true);
 
@@ -383,22 +390,22 @@ public class Level3 extends AppCompatActivity {
                         dialogEnd.show();
                     } else {
 
-                        numLeft = random.nextInt(10); //Генерируем случайное число от 0 до 9
-                        img_left.setImageResource(array.images2[numLeft]);  //Достаем из масива картинку
+                        numLeft = random.nextInt(21); //Генерируем случайное число от 0 до 21
+                        img_left.setImageResource(array.images3[numLeft]);  //Достаем из масива картинку
                         img_left.startAnimation(a);
 
-                        textLeft.setText(array.texts2[numLeft]); //Достаем из масива текст
+                        textLeft.setText(array.texts3[numLeft]); //Достаем из масива текст
 
-                        numRight = random.nextInt(10); //Генерируем случайное число от 0 до 9
+                        numRight = random.nextInt(21); //Генерируем случайное число от 0 до 21
                         //Цикл с предусловием проверяющий равенство чисел начало
                         while (numLeft==numRight){
-                            numRight = random.nextInt(10);
+                            numRight = random.nextInt(21);
                         }
                         //Цикл с предусловием проверяющий равенство чисел конец
 
-                        img_right.setImageResource(array.images2[numRight]); //Достаем из масива картинку
+                        img_right.setImageResource(array.images3[numRight]); //Достаем из масива картинку
                         img_right.startAnimation(a);
-                        textRight.setText(array.texts2[numRight]); //Достаем из масива текст
+                        textRight.setText(array.texts3[numRight]); //Достаем из масива текст
 
                         img_left.setEnabled(true);
 
