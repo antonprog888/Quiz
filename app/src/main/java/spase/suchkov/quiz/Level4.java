@@ -21,7 +21,7 @@ import java.util.Random;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Level3 extends AppCompatActivity {
+public class Level4 extends AppCompatActivity {
     Dialog dialog;
     Dialog dialogEnd;
 
@@ -105,7 +105,7 @@ public class Level3 extends AppCompatActivity {
                 //Обрабатывание кнопки Закрытия начало
                 try{
                     //Вернтьсся назад к выбору уровня начало
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
 
@@ -164,7 +164,7 @@ public class Level3 extends AppCompatActivity {
                 //Обрабатывание кнопки Закрытия начало
                 try{
                     //Вернтьсся назад к выбору уровня начало
-                    Intent intent = new Intent(Level3.this, GameLevels.class);
+                    Intent intent = new Intent(Level4.this, GameLevels.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
 
@@ -184,7 +184,7 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level3.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, Level4.class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
                 } catch (Exception e){
@@ -208,7 +208,7 @@ public class Level3 extends AppCompatActivity {
                 //Команда для кнопки назад
                 //Начало конструкции
                 try{
-                    Intent intent = new Intent(Level3.this, GameLevels.class);//Создали намерение для перехода
+                    Intent intent = new Intent(Level4.this, GameLevels.class);//Создали намерение для перехода
                     startActivity(intent); //Старт намерения
                     finish(); //Закрыть этот класс
                 } catch (Exception e){
@@ -229,7 +229,7 @@ public class Level3 extends AppCompatActivity {
         //Массив для прогреса игры конец
 
         //Подключаем анимацию начало
-        final Animation a = AnimationUtils.loadAnimation(Level3.this,R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level4.this,R.anim.alpha);
 
         //Подключаем анимацию конец
         numLeft = random.nextInt(21); //Генерируем случайное число от 1 до 21
@@ -439,7 +439,7 @@ public class Level3 extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         try{
-            Intent intent = new Intent(Level3.this, GameLevels.class);
+            Intent intent = new Intent(Level4.this, GameLevels.class);
             startActivity(intent);
             finish();
         } catch (Exception e){
