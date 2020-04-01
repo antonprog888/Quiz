@@ -73,7 +73,7 @@ public class Level4 extends AppCompatActivity {
         //Устанавливаем Фон диалогоого окна конец
 
 
-        //Вызов диалогового окна в конце меню
+        //Вызов диалогового окна
         dialog = new Dialog(this);//создаем диалоговое окно
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); //Скрываем заголовок диалогового окна
         dialog.setContentView(R.layout.previewdialog); //Путь к макету диалогового окна
@@ -83,17 +83,17 @@ public class Level4 extends AppCompatActivity {
 
         //Утанавливаем картинку в диалоговое окно - Начало
         ImageView previewimg =  dialog.findViewById(R.id.previewimg); //previewimg
-        previewimg.setImageResource(R.drawable.previewimg3);
+        previewimg.setImageResource(R.drawable.previewimg4);
         //Утанавливаем картинку в диалоговое окно - Конец
 
         //Устанавливаем фон диалогового окна - Начало
         LinearLayout dialogfon = dialog.findViewById(R.id.dialogfon);
-        dialogfon.setBackgroundResource(R.drawable.previewbackground3);
+        dialogfon.setBackgroundResource(R.drawable.previewbackground4);
         //Устанавливаем фон диалогового окна - Конец
 
         //Устанавливаем описание задания начало
         TextView textdescription = dialog.findViewById(R.id.textdescription);
-        textdescription.setText(R.string.levelthree);
+        textdescription.setText(R.string.levelfour);
         //Устанавливаем описание задания конец
 
 
