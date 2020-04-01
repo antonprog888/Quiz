@@ -45,4 +45,25 @@
     <string name="lvl3text19">Тамарин</string>
     <string name="lvl3text20">Леопард</string>
     <string name="lvl3text21">Медведь</string>
+    
+    <string name="lvl4text1">Петрушка</string>
+    <string name="lvl4text2">Дракон</string>
+    <string name="lvl4text3">Шашлык</string>
+    <string name="lvl4text4">Юла</string>
+    <string name="lvl4text5">Арбуз</string>
+    <string name="lvl4text6">Брусок</string>
+    <string name="lvl4text7">Яблоко</string>
+    <string name="lvl4text8">Мяч</string>
+    <string name="lvl4text9">Чеснок</string>
+    <string name="lvl4text10">Ластик</string>
+    <string name="lvl4text11">Сыр</string>
+    <string name="lvl4text12">Крипер</string>
+    <string name="lvl4text13">Броколи</string>
+    <string name="lvl4text14">Гайка</string>
+    <string name="lvl4text15">Кокос</string>
+    <string name="lvl4text16">Пластилин</string>
+    <string name="lvl4text17">Тыква</string>
+    <string name="lvl4text18">Шарик</string>
+    <string name="lvl4text19">Петрушка</string>
+    <string name="lvl4text20">Орех</string>
 </resources>

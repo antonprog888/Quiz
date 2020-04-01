@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GameLevels extends AppCompatActivity {
+public class  GameLevels extends AppCompatActivity {
 
 
     @Override
