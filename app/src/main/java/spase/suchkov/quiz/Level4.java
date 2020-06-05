@@ -40,7 +40,7 @@ public class Level4 extends AppCompatActivity {
         setContentView(R.layout.universal);
         //Создаем переменую text levels
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level3); //установили текст
+        text_levels.setText(R.string.level4); //установили текст
         text_levels.setTextColor(R.color.black95);
 
         final ImageView img_left = findViewById(R.id.img_left);
@@ -67,10 +67,10 @@ public class Level4 extends AppCompatActivity {
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Развернуть игру на весь экран конец
 
-        //Устанавливаем Фон диалогоого окна начало
+        //Устанавливаем Фон начало
         ImageView background = (ImageView)findViewById(R.id.background);
         background.setImageResource(R.drawable.level4);
-        //Устанавливаем Фон диалогоого окна конец
+        //Устанавливаем Фон конец
 
 
         //Вызов диалогового окна
@@ -146,12 +146,12 @@ public class Level4 extends AppCompatActivity {
 
         //Устанавливаем фон диалогового окна начало
         LinearLayout dialogfonEnd = (LinearLayout) dialogEnd.findViewById(R.id.dialogfon);
-        dialogfonEnd.setBackgroundResource(R.drawable.previewbackground3);
+        dialogfonEnd.setBackgroundResource(R.drawable.previewbackground4);
         //Устанавливаем фон диалогового окна конец
 
         //Интересный факт начало
         TextView textdescriptionEnd = (TextView)dialogEnd.findViewById(R.id.textdescriptionEnd);
-        textdescriptionEnd.setText(R.string.levelthreeEnd);
+        textdescriptionEnd.setText(R.string.levelfourEnd);
         //Интересный факт конец
 
 
@@ -184,7 +184,7 @@ public class Level4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    Intent intent = new Intent(Level4.this, Level4.class);
+                    Intent intent = new Intent(Level4.this, GameLevels .class);
                     startActivity(intent); //Старт намериния
                     finish(); //Закрыть класс
                 } catch (Exception e){
