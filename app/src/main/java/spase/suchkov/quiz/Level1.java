@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.app.slice.SliceItem;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
+import java.util.logging.Level;
 
 public class Level1 extends AppCompatActivity {
     Dialog dialog;
@@ -205,6 +207,8 @@ public class Level1 extends AppCompatActivity {
         img_right.setImageResource(array.images1[numRight]); //Достаем из масива картинку
         textRight.setText(array.texts1[numRight]); //Достаем из масива текст
 
+
+
         //Обрабатываем нажатие на левую картинку начало
         img_left.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -264,7 +268,18 @@ public class Level1 extends AppCompatActivity {
                     //Если отпустили палец конец
 
                     if (count==20) {
-                        //Выход из уровня
+                        //Выход из уровня!!!
+                        //Сохранение начало
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int level = save.getInt("Level", 1);
+                        if (level > 1) {
+                            //пусто
+                        } else {
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Level", 2);
+                            editor.commit();
+                        }
+                        //Сохранение конец
                         dialogEnd.show();
                     } else {
 
@@ -359,6 +374,19 @@ public class Level1 extends AppCompatActivity {
 
                     if (count==20) {
                         //Выход из уровня
+
+                        //Сохранение начало
+                        SharedPreferences save = getSharedPreferences("Save", MODE_PRIVATE);
+                        final int level = save.getInt("Level", 1);
+                        if (level > 1) {
+                            //пусто
+                        } else {
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Level", 2);
+                            editor.commit();
+                        }
+                        //Сохранение конец
+
                         dialogEnd.show();
                     } else {
 
