@@ -156,4 +156,55 @@ public class Array {
 
     final int [] strong = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
     //Массив для четвертого уровлня конец
+
+    //Массив для пятого уровлня начало
+    final int [] images5 = {
+            R.drawable.predator1,
+            R.drawable.herbivore1,
+            R.drawable.predator2,
+            R.drawable.herbivore2,
+            R.drawable.predator3,
+            R.drawable.herbivore3,
+            R.drawable.predator4,
+            R.drawable.herbivore4,
+            R.drawable.predator5,
+            R.drawable.herbivore5,
+            R.drawable.predator6,
+            R.drawable.herbivore6,
+            R.drawable.predator7,
+            R.drawable.herbivore7,
+            R.drawable.predator8,
+            R.drawable.herbivore8,
+            R.drawable.predator9,
+            R.drawable.herbivore9,
+            R.drawable.predator10,
+            R.drawable.herbivore10
+    };
+
+    final int [] texts5 = {
+            R.string.lvl5text1,
+            R.string.lvl5text2,
+            R.string.lvl5text3,
+            R.string.lvl5text4,
+            R.string.lvl5text5,
+            R.string.lvl5text6,
+            R.string.lvl5text7,
+            R.string.lvl5text8,
+            R.string.lvl5text9,
+            R.string.lvl5text10,
+            R.string.lvl5text11,
+            R.string.lvl5text12,
+            R.string.lvl5text13,
+            R.string.lvl5text14,
+            R.string.lvl5text15,
+            R.string.lvl5text16,
+            R.string.lvl5text17,
+            R.string.lvl5text18,
+            R.string.lvl5text19,
+            R.string.lvl5text20
+    };
+
+    final int [] strong5 = {1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0};
+    //Массив для четвертого уровлня конец
+
 }

@@ -66,4 +66,27 @@
     <string name="lvl4text18">Шарик</string>
     <string name="lvl4text19">Орех</string>
     <string name="lvl4text20">Лампочка</string>
+
+
+    <string name="lvl5text1">Лев</string>
+    <string name="lvl5text2">Морская свинка</string>
+    <string name="lvl5text3">Леопард</string>
+    <string name="lvl5text4">Вомбат</string>
+    <string name="lvl5text5">Пума</string>
+    <string name="lvl5text6">Заяц</string>
+    <string name="lvl5text7">Куница</string>
+    <string name="lvl5text8">Зубр</string>
+    <string name="lvl5text9">Лиса</string>
+    <string name="lvl5text10">Верблюд</string>
+    <string name="lvl5text11">Медведь</string>
+    <string name="lvl5text12">Капибара</string>
+    <string name="lvl5text13">Тюлень</string>
+    <string name="lvl5text14">Бобер</string>
+    <string name="lvl5text15">Удав</string>
+    <string name="lvl5text16">Зебра</string>
+    <string name="lvl5text17">Ласка</string>
+    <string name="lvl5text18">Окапи</string>
+    <string name="lvl5text19">Коати</string>
+    <string name="lvl5text20">Жираф</string>
+
 </resources>

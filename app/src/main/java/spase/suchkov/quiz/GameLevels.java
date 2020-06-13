@@ -103,6 +103,21 @@ public class  GameLevels extends AppCompatActivity {
         //Кнопка для перехода на четвертый уровень конец
 
 
+        //Кнопка для перехода на пятый уровень начало
+        TextView textView5 = findViewById(R.id.textView5);
+        textView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent(GameLevels.this, Level5.class);
+                    startActivity(intent);
+                    finish();
+                }catch(Exception e){
+                }
+            }
+        });
+        //Кнопка для перехода на пятый уровень конец
+
     }
 
 
