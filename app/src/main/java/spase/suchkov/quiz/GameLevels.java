@@ -184,10 +184,10 @@ public class  GameLevels extends AppCompatActivity {
             TextView tv = findViewById(x[i]);
             if (i<level) {
                 tv.setText(""+(i+1));
-               // tv.setBackground(getResources().getDrawable(R.drawable.style_btn_black95));
+               tv.setBackground(getResources().getDrawable(R.drawable.button_gamelevels));
             }else
             {
-              //  tv.setBackground(getResources().getDrawable(R.drawable.style_btn_black60));
+                tv.setBackground(getResources().getDrawable(R.drawable.style_btn_black60));
             }
         }
     }
